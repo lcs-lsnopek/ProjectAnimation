@@ -8,17 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		B24176C12819891000151AC4 /* ProjectAnimationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24176C02819891000151AC4 /* ProjectAnimationApp.swift */; };
-		B24176C32819891000151AC4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24176C22819891000151AC4 /* ContentView.swift */; };
 		B24176C52819891400151AC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B24176C42819891400151AC4 /* Assets.xcassets */; };
 		B24176C82819891400151AC4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B24176C72819891400151AC4 /* Preview Assets.xcassets */; };
+		B24176D128198CDF00151AC4 /* CompletionMeterDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24176D028198CDF00151AC4 /* CompletionMeterDescriptionView.swift */; };
+		B24176D328198CEC00151AC4 /* CompletionMeterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24176D228198CEC00151AC4 /* CompletionMeterView.swift */; };
+		B24176D528198F0600151AC4 /* SimpleListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24176D428198F0600151AC4 /* SimpleListItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B24176BD2819891000151AC4 /* ProjectAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B24176C02819891000151AC4 /* ProjectAnimationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectAnimationApp.swift; sourceTree = "<group>"; };
-		B24176C22819891000151AC4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B24176C42819891400151AC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B24176C72819891400151AC4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B24176D028198CDF00151AC4 /* CompletionMeterDescriptionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompletionMeterDescriptionView.swift; sourceTree = "<group>"; };
+		B24176D228198CEC00151AC4 /* CompletionMeterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompletionMeterView.swift; sourceTree = "<group>"; };
+		B24176D428198F0600151AC4 /* SimpleListItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleListItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,7 @@
 		B24176B42819891000151AC4 = {
 			isa = PBXGroup;
 			children = (
+				B24176C02819891000151AC4 /* ProjectAnimationApp.swift */,
 				B24176BF2819891000151AC4 /* ProjectAnimation */,
 				B24176BE2819891000151AC4 /* Products */,
 			);
@@ -51,8 +56,9 @@
 		B24176BF2819891000151AC4 /* ProjectAnimation */ = {
 			isa = PBXGroup;
 			children = (
-				B24176C02819891000151AC4 /* ProjectAnimationApp.swift */,
-				B24176C22819891000151AC4 /* ContentView.swift */,
+				B24176D028198CDF00151AC4 /* CompletionMeterDescriptionView.swift */,
+				B24176D228198CEC00151AC4 /* CompletionMeterView.swift */,
+				B24176D428198F0600151AC4 /* SimpleListItemView.swift */,
 				B24176C42819891400151AC4 /* Assets.xcassets */,
 				B24176C62819891400151AC4 /* Preview Content */,
 			);
@@ -137,8 +143,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B24176C32819891000151AC4 /* ContentView.swift in Sources */,
+				B24176D328198CEC00151AC4 /* CompletionMeterView.swift in Sources */,
 				B24176C12819891000151AC4 /* ProjectAnimationApp.swift in Sources */,
+				B24176D128198CDF00151AC4 /* CompletionMeterDescriptionView.swift in Sources */,
+				B24176D528198F0600151AC4 /* SimpleListItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

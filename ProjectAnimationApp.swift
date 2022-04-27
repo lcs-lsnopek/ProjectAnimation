@@ -11,7 +11,7 @@ import SwiftUI
 struct ProjectAnimationApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CompletionMeterDescriptionView()
         }
     }
 }
