@@ -21,6 +21,11 @@ struct CompletionMeterView: View {
     // Whether to apply the animation
     @State private var useAnimation = false
     
+   @State var opacity1 = 0.0
+    
+    @State var opacity2 = 1.0
+    
+    
     // NOTE: Here, we use a timer to initiate the state changes.
     //       In the implicit animation examples given earlier, the USER
     //       initiated state changes by, for example, clicking on the red circle.
@@ -40,6 +45,7 @@ struct CompletionMeterView: View {
                 .stroke(Color.red, lineWidth: 20)
                 .frame(width: 200, height: 200)
                 .rotationEffect(.degrees(-90))
+                .opacity(opacity2)
                 // When the timer fires, the code in this block will run.
                 .onReceive(timer) { _ in
                     
@@ -48,9 +54,12 @@ struct CompletionMeterView: View {
                         
                         // Stop the timer from continuing to fire
                         timer.upstream.connect().cancel()
-
+                        opacity1 = 1.0
+                        opacity2 = 0.0
                         return
                     }
+                    
+            
                     
                     // Animate the trim being closed
                     withAnimation(.default) {
@@ -59,9 +68,16 @@ struct CompletionMeterView: View {
                     
                 }
             
+            Text("emoji")
+                .opacity(opacity1)
+                .animation(.easeInOut(duration: 2))
+                .scaleEffect(4)
+            
             Text("\(String(format: "%3.0f", (completionAmount) * 100.0))%")
                 .font(Font.custom("Courier-Bold", size: 24.0))
+                .opacity(opacity2)
                 .animation(.default)
+                
 
         }
     }
