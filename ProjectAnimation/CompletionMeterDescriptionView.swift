@@ -12,6 +12,8 @@ struct CompletionMeterDescriptionView: View {
     // MARK: Stored properties
     @State private var percentComplete: CGFloat = 50.0
     
+    @State var textInput: String = ""
+    
     // MARK: Computed properties
     var body: some View {
         
@@ -30,18 +32,22 @@ struct CompletionMeterDescriptionView: View {
                     Select a value below using the slider.
 
                     Then navigate to the view to see the progress meter.
+                    
+                    This view can be costomized to say difrent things to the user or show difrent emojis in the TextFeild blow after the slider is complet.
                     """)
                 .minimumScaleFactor(0.5)
                 
                 Slider(value: $percentComplete, in: 0...100, step: 1.0) {
                     Text("Completion amount")
                 }
-                                    
+                 
+                TextField("enter a emoji:", text: $textInput)
+                
             }
             .padding(.bottom)
             
             List {
-                NavigationLink(destination: CompletionMeterView(fillToValue: percentComplete)) {
+                NavigationLink(destination: CompletionMeterView(fillToValue: percentComplete, input: textInput )) {
                     SimpleListItemView(title: "Completion Meter",
                                        caption: "Will illustrate fill to \(String(format: "%.0f", percentComplete))%")
                 }

@@ -25,6 +25,7 @@ struct CompletionMeterView: View {
     
     @State var opacity2 = 1.0
     
+    @State var input: String = "time"
     
     // NOTE: Here, we use a timer to initiate the state changes.
     //       In the implicit animation examples given earlier, the USER
@@ -68,7 +69,7 @@ struct CompletionMeterView: View {
                     
                 }
             
-            Text("emoji")
+            Text(input)
                 .opacity(opacity1)
                 .animation(.easeInOut(duration: 2))
                 .scaleEffect(4)
